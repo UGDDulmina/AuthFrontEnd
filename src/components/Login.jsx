@@ -36,7 +36,7 @@ const Login = () => {
             <form onSubmit={onSubmit} className= 'flex flex-col w-full justify-center items-center'>
                 <input type="email" name="email" value={email} onChange={onChange} placeholder="Email" required  className=' h-14 m-2 bg-gray-200 w-1/3 p-2 rounded-lg border border-gray-400'/>
                 <input type="password" name="password" value={password} onChange={onChange} placeholder="Password" required  className=' h-14 m-2 bg-gray-200 w-1/3 rounded-lg p-2 border border-gray-400'/>
-                <button type="submit" className='bg-blue-400 p-2 rounded-lg text-white'>Login</button>
+                <button type="submit" className='bg-blue-400 p-2 rounded-lg text-white hover:bg-blue-500'>Login</button>
             </form>
         </div>
     );
