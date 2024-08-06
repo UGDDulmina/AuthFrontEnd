@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -22,6 +23,8 @@ const Signup = () => {
             const res = await axios.post(`http://localhost:5000/api/auth/signup`, formData);
             setSuccess(res.data.token);
             setError(null);
+            router.push('/components/Login');
+            
         } catch (err) {
             setError(err.response.data.msg);
             setSuccess(null);
